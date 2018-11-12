@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -14,7 +15,9 @@ public class GameController : MonoBehaviour {
 
 
         if (Input.GetKey("r")) {
-            Application.LoadLevel(Application.loadedLevel);
+            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         }
         if (Input.GetKey("escape")) {
             Application.Quit();
